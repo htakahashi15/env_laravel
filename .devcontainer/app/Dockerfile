@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
   zip \
   unzip \
   && pecl istall xdebug \
-  && rm -rf /var/lib/apt/lists/* \
-  && docker-php-ext-install pdo_pgsql
+  && docker-php-ext-install pdo_mysql \
+  && rm -rf /var/lib/apt/lists/*
 
 ENV TZ=Asia/Tokyo

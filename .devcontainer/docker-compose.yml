@@ -6,7 +6,7 @@ services:
     build: ./app
     container_name: 'laravel_app'
     ports:
-      - 8000:8000
+      - '8000:8000'
     stdin_open: true
     tty: true
     working_dir: '/var/www/html'
@@ -30,6 +30,6 @@ services:
       - MYSQL_PASSWORD=my
     volumes:
       - ../db/database:/var/lib/mysql
-      - ../db/init:/docker-entrypoint-initdb.db
+      - ../db/init:/docker-entrypoint-initdb.d
 
       
